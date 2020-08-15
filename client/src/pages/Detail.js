@@ -2,14 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from '@apollo/react-hooks';
 import Cart from '../components/Cart';
-
 import { QUERY_PRODUCTS } from "../utils/queries";
 import spinner from '../assets/spinner.gif'
-
 import { idbPromise } from "../utils/helpers";
+import { useSelector, useDispatch } from "react-redux";
 
 // importing hooks
-import { useStoreContext } from "../utils/GlobalState";
 import {
   REMOVE_FROM_CART,
   UPDATE_CART_QUANTITY,
@@ -17,8 +15,12 @@ import {
   UPDATE_PRODUCTS,
 } from '../utils/actions';
 
+
 function Detail() {
-  const [state, dispatch] = useStoreContext();
+  const state = useSelector((state) => {
+    return state;
+  });
+  const dispatch = useDispatch; 
 
   const { id } = useParams();
 
