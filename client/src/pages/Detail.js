@@ -17,10 +17,9 @@ import {
 
 
 function Detail() {
-  const state = useSelector((state) => {
-    return state;
-  });
-  const dispatch = useDispatch; 
+  const state = useSelector(state => state);
+
+  const dispatch = useDispatch(); 
 
   const { id } = useParams();
 

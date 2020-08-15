@@ -6,17 +6,15 @@ import { idbPromise } from "../../utils/helpers";
 import { useSelector, useDispatch } from "react-redux";
 
 function ProductItem(item) {
-  // const {
-  //   image,
-  //   name,
-  //   _id,
-  //   price,
-  //   quantity
-  // } = item;
+  const {
+    image,
+    name,
+    _id,
+    price,
+    quantity
+  } = item;
 
-  const state = useSelector((state) => {
-    return state;
-  });
+  const state = useSelector(state => state);
 
   const dispatch = useDispatch();
 
