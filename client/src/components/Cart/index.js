@@ -29,15 +29,6 @@ const Cart = () => {
     }
   }, [state.cart.length, dispatch]);
 
-  // stripe 
-  useEffect(() => {
-    if (data) {
-      stripePromise.then((res) => {
-        res.redirectToCheckout({ sessionId: data.checkout.session });
-      });
-    }
-  }, [data]);
-
   function toggleCart() {
     dispatch({ type: TOGGLE_CART });
   }
@@ -62,6 +53,15 @@ const Cart = () => {
       variables: { products: productIds }
     });
   }
+  
+  // stripe 
+  useEffect(() => {
+    if (data) {
+      stripePromise.then((res) => {
+        res.redirectToCheckout({ sessionId: data.checkout.session });
+      });
+    }
+  }, [data]);
 
   // if cart is not open 
   if (!state.cartOpen) {

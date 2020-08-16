@@ -55,8 +55,9 @@ const resolvers = {
     checkout: async (parent, args, context) => {
       const order = new Order({ products: args.products });
       const { products } = await order.populate('products').execPopulate();
-      const line_items = [];
       const url = new URL(context.headers.referer).origin;
+      
+      const line_items = [];
 
       for (let i = 0; i < products.length; i++) {
         // generate product id
