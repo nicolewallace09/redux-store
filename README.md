@@ -1,9 +1,9 @@
-# Shop-Shop
+# Redux Shop
 
 ![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Description 
-This project is a full stack web application using the MERN Stack to create an e-commerce website using React and React-Context API with Stripe payments. Users will be able to checkout when there is lost of connection and view their order history out of checkout. Users will also be able to sign up and login in to their account. This application uses a global state.
+This project is a full stack web application using the MERN Stack to create an e-commerce website using React and Redux with Stripe payments. Users will be able to checkout when there is lost of connection and view their order history out of checkout. Users will also be able to sign up and login in to their account. 
 
 ## Table of Contents
 * [Installation](#installation)
@@ -18,7 +18,7 @@ The user should clone the repository from GitHub and install dependencies. For d
 
 ## Usage 
 This application will allow users to add products to their cart either from the main page or product page. Users can then checkout using Stripe and view their order history.<br>
-Please view deployed application on [Heroku](https://nw-shopshop.herokuapp.com//)<br>
+Please view deployed application on [Heroku]https://nw-reduxshop.herokuapp.com//)<br>
 <img src='client/public/images/screenshot.png'>
 
 ## License 
